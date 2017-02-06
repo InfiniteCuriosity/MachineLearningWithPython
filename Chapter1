@@ -1,0 +1,153 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false,
+    "deletable": true,
+    "editable": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "x:\n",
+      "[[1 2 3]\n",
+      " [5 6 7]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#1. First things first, here is an example of NumPy\n",
+    "import numpy as np\n",
+    "x=np.array([[1,2,3],[5,6,7]])\n",
+    "print(\"x:\\n{}\".format(x))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": false,
+    "deletable": true,
+    "editable": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "NumPy array:\n",
+      "[[ 1.  0.  0.  0.]\n",
+      " [ 0.  1.  0.  0.]\n",
+      " [ 0.  0.  1.  0.]\n",
+      " [ 0.  0.  0.  1.]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#2. SciPy is a library for scientific computing.\n",
+    "from scipy import sparse\n",
+    "#create a 2D NumPy array with zeros everywhere else\n",
+    "eye=np.eye(4)\n",
+    "\n",
+    "print(\"NumPy array:\\n{}\".format(eye))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": false,
+    "deletable": true,
+    "editable": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "SciPy sparse CSR matrix:\n",
+      "  (0, 0)\t1.0\n",
+      "  (1, 1)\t1.0\n",
+      "  (2, 2)\t1.0\n",
+      "  (3, 3)\t1.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#3. Convert the NumPy array to a SciPy sparse array in CSR format\n",
+    "# 1s along the diagonal, 0s everywhere else\n",
+    "sparse_matrix=sparse.csr_matrix(eye)\n",
+    "print(\"\\nSciPy sparse CSR matrix:\\n{}\".format(sparse_matrix))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {
+    "collapsed": false,
+    "deletable": true,
+    "editable": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "\\begin{eqnarray}\n",
+       "\\mathop{\\int}\\limits_{0}\\limits^{\\mathit{\\pi}}{\\cos{\\mathrm{(}}{x}{\\mathrm{)}}\\hspace{0.33em}{dx}}\\hspace{0.33em}\\mathrm{{=}}\\hspace{0.33em}{1}\n",
+       "\\end{eqnarray}"
+      ],
+      "text/plain": [
+       "<IPython.core.display.Latex object>"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from IPython.display import Latex\n",
+    "Latex(r\"\"\"\\begin{eqnarray}\n",
+    "\\mathop{\\int}\\limits_{0}\\limits^{\\mathit{\\pi}}{\\cos{\\mathrm{(}}{x}{\\mathrm{)}}\\hspace{0.33em}{dx}}\\hspace{0.33em}\\mathrm{{=}}\\hspace{0.33em}{1}\n",
+    "\\end{eqnarray}\"\"\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true,
+    "deletable": true,
+    "editable": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
